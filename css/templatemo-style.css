@@ -192,9 +192,14 @@ header {
   width: 100%;
   height: 140px;
   line-height: 100px;
-  background-color: #45489a;
+  /* background-color: #45489a; */
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
+  
+}
+.sidebar-navigation .logo img{
+  height: 9rem;
 }
 
 .sidebar-navigation .logo a {
@@ -376,7 +381,7 @@ header {
   outline: none;
   display: none;
   position:absolute;
-  top:60px;
+  top:130px;
   right:60px;
   width:50px;
   height:50px;
@@ -394,7 +399,7 @@ header {
 .Modern-Slider .PrevArrow{
   outline: none;
   position:absolute;
-  top:60px;
+  top:130px;
   right: 120px;
   width:50px;
   height:50px;
@@ -598,6 +603,7 @@ header {
 /* Projects Style */
 
 #projects {
+  margin-top: 5rem;
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 50px;
@@ -624,6 +630,7 @@ header {
 /* Video Presentation Style */
 
 #about, #presentation {
+  margin-top: 4rem;
   text-align: center;
   background-color: #f4f4f4;
   padding: 100px 60px;
@@ -663,7 +670,21 @@ header {
 #about .accent-button, #presentation .accent-button {
   margin-top: 30px;
 }
+#about .sdg{
+  margin-top: 4rem;
+}
+#about .sdg > img{
+ width: 100%;
+ object-fit: contain;
+}
+#about .goal{
+  margin-top: 4rem;
+}
 
+#about .goal .section-heading{
+  text-align: left !important;
+}
+#about .goal .section-heading > h1{ text-align: center !important; margin-bottom: 2rem;}
 .box-video{
   width: 100%;
   position: relative;
@@ -1092,4 +1113,57 @@ header {
     padding-right: 15px;
   }
 
+}
+
+
+/* Custom top header */
+.custom-top-header{
+  background-image: linear-gradient(#0000005e, #00000096), url(../new-assets/water-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90px;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px 0 5px;
+}
+.custom-top-header h1{
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: -6px;
+  margin-left:65px;
+  color: #00aeef;
+  text-shadow: 0px 1px #a7a7a7;
+}
+.custom-top-header .logo{
+  height:7rem;
+}
+
+/* for small screen */
+@media (max-width: 767px){
+  .responsive-nav{
+    background-color: transparent;
+   
+  }
+  .navbar-toggle{
+    left: 11px !important;
+    transform: translateX(0) !important;
+     top: 9px;
+  }
+}
+
+/* Target greater screen */
+@media (min-width: 767px){
+  .custom-top-header .logo{height: 9rem;} 
+  .custom-top-header{
+    width: 77.5%;
+    right: 0;
+    background-position: 50% 40%;
+  }
+  .custom-top-header h1{
+    font-size: 2rem;
+  }
 }
